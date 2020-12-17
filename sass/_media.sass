@@ -1,0 +1,286 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	.main-entry, .main-icons--block, .main-search
+		display: none
+	.sandvich-menu--container
+			position: relative
+			top: 80px
+			left: 10px
+			border-radius: 50px
+			border: 10px solid #fff
+			background-color: #3b3835
+			padding: 10px
+			width: 75px
+			height: 75px
+			//border: 1px solid red
+	.sandvich-menu
+		display: block
+		cursor: pointer
+		z-index: 100
+		border-top: 2px solid #fff
+		width: 30px
+		height: 30px
+		position: relative
+		top: 10px
+		left: 2px
+		&::before, &::after
+			content: ""
+			position: absolute
+			width: 30px 
+			height: 2px
+			background-color: #fff
+			color: #fff
+			z-index: 100
+		&::before						
+			top: 4px			
+		&::after
+			top: 10px
+	.footer-container
+		grid-template-columns: 33% 33% 33%
+		//justify-content: space-around
+		&--item
+			margin-right: 0
+			//width: 50%
+			//border: 1px solid blue
+			margin-top: 15px
+			width: 100%
+	.our-social--media
+		grid-template-columns: repeat(3, 1fr)
+	.media-item
+		&:nth-child(1)
+			grid-row: 1
+			grid-column: 1/3
+		&:nth-child(2)
+			grid-row: 1
+			grid-column: 3/4
+		&:nth-child(3)
+			grid-row: 2
+			grid-column: 1/2
+		&:nth-child(4)
+			grid-row: 2
+			grid-column: 2/3
+		&:nth-child(5)
+			grid-row: 2
+			grid-column: 3/4
+		&:nth-child(6)
+			grid-row: 3
+			grid-column: 1/4	
+	.our-advice
+		grid-template-columns: repeat(2, 1fr)
+		justify-content: space-between
+	.advice-item
+		max-width: 100%
+	.main-header--bottom
+		display: none
+	.main-header--heading	
+		margin-top: 100px
+	.main-header
+		.container
+			max-width: 1000px
+			//border: 1px solid red
+			padding:
+				left: 15px
+				right: 15px
+	.main-header--top
+		flex-direction: column
+		//border: 1px solid black
+	.main-navigation
+		display: flex
+		justify-content: space-between
+		order: 0
+		//width: 100%
+		flex-grow: 1
+		//border: 1px solid red
+		&--list
+			display: flex
+			justify-content: space-between
+			margin-right: 0px
+			li 
+				text-align: center
+				//border: 1px solid red
+				a	
+					display: block				
+					text-align: center
+					//border: 1px solid red
+					margin-right: 20px
+	.main-logo
+		order: 0
+		//width: 100%
+		margin-bottom: 30px
+		margin-top: 20px
+		margin-left: auto
+		margin-right: auto
+	.main-entry
+		order: 0	
+    	//margin-bottom: 50px
+		margin-left: auto
+		margin-right: auto
+	.main-icons--block
+		order: 5
+		margin-top: 20px
+		margin-bottom: 20px
+		//display: none
+	.main-search
+		order: 4
+		position: relative
+		margin-bottom: 20px
+		margin-top: 10px
+	    margin-left: auto
+		margin-right: auto
+		text-align: center
+		
+
+	.products-reason
+		flex-wrap: wrap
+		
+		button
+			margin-top: 20px
+	.products-reason
+		//min-height: 250px	
+		flex-direction: column	
+		align-items: center
+	.products-reason--element	
+		//width: auto	
+		width: 80%
+		margin-right: 15px
+		
+
+			
+		
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.footer-container
+		grid-template-columns: 50% 50% 
+		&--item
+			margin: 0 auto
+			margin-top: 15px
+			max-width: 300px
+	.products-block
+		grid-template-columns: repeat(2, 1fr)	
+
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	
+	
+	
+	.main-header--heading	
+		margin-top: 30px
+	.after-footer
+		flex-direction: column
+	.form-container
+		margin-top: 30px
+	.mailing-block
+		flex-direction: column
+		align-items: center
+		flex-wrap: wrap
+	.invitation-button
+		margin-top: 40px
+		padding: 15px 30px
+		width: 220px
+		height: 50px
+	.invitation-text
+		margin-top: 25px
+		padding:
+			left: 10px
+			right: 10px
+			font-size: 18px
+	.our-social--media
+		grid-template-columns: repeat(2, 1fr)
+	.media-item
+		&:nth-child(1)
+			grid-row: 1
+			grid-column: 1/3
+		&:nth-child(2)
+			grid-row: 2
+			grid-column: 1/2
+		&:nth-child(3)
+			grid-row: 2
+			grid-column: 2/3
+		&:nth-child(4)
+			grid-row: 3
+			grid-column: 1/2
+		&:nth-child(5)
+			grid-row: 3
+			grid-column: 2/3
+		&:nth-child(6)
+			grid-row: 4
+			grid-column: 1/3
+	.sandvich-menu2 .sandvich-menu::before, .sandvich-menu2 .sandvich-menu::after
+		height: 10px
+
+@media only screen and (max-width : 650px)
+	.main-navigation--list
+		display: none
+	.footer-container
+		grid-template-columns: 1fr
+		&--item
+			padding-left: 15px
+			margin: 0 auto
+			margin-top: 15px
+			max-width: 400px
+	.mailing-form
+		max-width: 375px
+		box-sizing: border-box
+		flex-wrap: wrap
+		border: 5px solid green
+		flex-direction: column
+		margin-top: 130px
+	.mailing-input
+		width: 100%
+		flex-grow: 1
+		margin-bottom: 20px
+	.mailing-button
+		
+		flex-grow: 1	
+	.products-block
+		grid-template-columns: 1fr
+	.products-block--element
+		height: auto
+	.our-advice
+		grid-template-columns: 1fr
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+
+	/**/
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
